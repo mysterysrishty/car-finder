@@ -5,7 +5,7 @@ const cars = [
     brand: "Maruti",
     fuel: "Petrol",
     price: 700000,
-    img: "images/swift.jpg"
+    img: "swift.jpg"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const cars = [
     brand: "Tata",
     fuel: "Electric",
     price: 1400000,
-    img: "images/nexon.jpg"
+    img: "nexon.jpg"
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const cars = [
     brand: "Hyundai",
     fuel: "Diesel",
     price: 1500000,
-    img: "images/creta.jpg"
+    img: "creta.jpg"
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const cars = [
     brand: "Honda",
     fuel: "Petrol",
     price: 1200000,
-    img: "images/city.jpg"
+    img: "city.jpg"
   }
 ];
 
