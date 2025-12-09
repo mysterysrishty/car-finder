@@ -1,0 +1,279 @@
+/* ------------------------------
+   GLOBAL STYLES
+------------------------------ */
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, sans-serif;
+  background: #f4f4f4;
+  color: #111827;
+}
+
+header {
+  background: #0d6efd;
+  color: white;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+header input {
+  margin-top: 12px;
+  width: 100%;
+  max-width: 520px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Cart Summary */
+.cart-summary {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  line-height: 1.4;
+}
+
+/* ------------------------------
+   FILTERS
+------------------------------ */
+.filters {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  background: white;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.filters select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ------------------------------
+   LAYOUT
+------------------------------ */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 18px;
+}
+
+/* ------------------------------
+   CAR LIST GRID
+------------------------------ */
+.car-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+/* ------------------------------
+   CAR CARD (CARDEKHO STYLE)
+------------------------------ */
+.car-card {
+  background: white;
+  padding: 14px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: all 0.35s ease;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hover Lift + Glow */
+.car-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+}
+
+/* Car Image — No Cropping + Zoom Hover */
+.car-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 8px;
+  transition: transform 0.35s ease;
+}
+
+.car-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Car Card Text */
+.car-card h3 {
+  margin: 12px 0 6px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.car-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.price {
+  font-size: 19px;
+  font-weight: bold;
+  color: #0d6efd;
+  margin-top: 8px;
+}
+
+/* Add to Cart Button (Premium Orange Gradient) */
+.car-card button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(45deg, #ff6b00, #ff8800);
+  transition: 0.25s ease;
+}
+
+.car-card button:hover {
+  background: linear-gradient(45deg, #ff8800, #ff6b00);
+  transform: translateY(-2px);
+}
+
+/* ------------------------------
+   CART SIDEBAR
+------------------------------ */
+.cart {
+  background: white;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.cart h2 {
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#cartList {
+  list-style: none;
+  padding: 0;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+#cartList li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 15px;
+}
+
+#cartList li:last-child {
+  border-bottom: none;
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cart-footer {
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.cart-footer button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.cart-footer button:hover {
+  background: #b91c1c;
+}
+
+/* ------------------------------
+   ANIMATIONS
+------------------------------ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (min-width: 900px) {
+  .main-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .car-list {
+    flex: 3;
+  }
+
+  .cart {
+    flex: 1;
+    position: sticky;
+    top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .car-list {
+    grid-template-columns: 1fr;
+  }
+
+  .car-card img {
+    height: 160px;
+  }
+}

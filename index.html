@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Finder with Cart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <h1>🚗 Car Finder</h1>
+      <div class="cart-summary">
+        <span>🛒 Cart: <span id="cartCount">0</span> cars</span>
+        <span>Total: ₹<span id="cartTotal">0</span></span>
+      </div>
+    </div>
+    <input type="text" id="searchInput" placeholder="Search by car name..." />
+  </header>
+
+  <section class="filters">
+    <select id="brandFilter">
+      <option value="">All Brands</option>
+      <option value="Maruti">Maruti</option>
+      <option value="Hyundai">Hyundai</option>
+      <option value="Tata">Tata</option>
+      <option value="Honda">Honda</option>
+      <option value="Kia">Kia</option>
+    </select>
+
+    <select id="fuelFilter">
+      <option value="">Fuel Type</option>
+      <option value="Petrol">Petrol</option>
+      <option value="Diesel">Diesel</option>
+      <option value="Electric">Electric</option>
+    </select>
+
+    <select id="priceFilter">
+      <option value="">Max Price</option>
+      <option value="500000">₹5,00,000</option>
+      <option value="1000000">₹10,00,000</option>
+      <option value="1500000">₹15,00,000</option>
+    </select>
+  </section>
+
+  <main class="main-layout">
+    <section id="carList" class="car-list"></section>
+
+    <aside class="cart">
+      <h2>Selected Cars</h2>
+      <ul id="cartList"></ul>
+      <div class="cart-footer">
+        <p><strong>Total Cars:</strong> <span id="cartCountSide">0</span></p>
+        <p><strong>Total Price:</strong> ₹<span id="cartTotalSide">0</span></p>
+        <button id="clearCart">Clear Cart</button>
+      </div>
+    </aside>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
